@@ -1,0 +1,40 @@
+html, body{
+  height: 100%;
+}
+
+h1{
+  font-family: 'Merriweather', serif;
+}
+
+h6{
+  color: white;
+  font-weight: 500;
+}
+
+#container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+span{
+  font-weight: 300;
+}
+
+#info_container{
+  margin-left: 2em;
+}
+
+#chart{
+  width: 550px;
+  height: 350px;
+}
+
+#controls {
+  position: absolute;
+  float: right;
+}
+
+.btn-floating{
+  margin-left: .5em;
+}
