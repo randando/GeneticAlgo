@@ -16,19 +16,58 @@
     <script src="sketch.js"></script>
   </head>
   <body class="pink lighten-2">
-    <h1 class="center-align white-text">Genetic Algorithm</h1>
+    <nav>
+        <div class="nav-wrapper pink lighten-1">
+          <a href="#" class="brand-logo">GenAlgo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="modal-trigger" href="#modal1" onclick="instance.open()">Read More</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+     <!-- Modal Structure -->
+     <div id="modal1" class="modal">
+       <div class="modal-content">
+         <h4>Path Finding Genetic Algorithm</h4>
+         <p>Agents start moving in random directions. Each generation improves individual paths to the target. This simulation incentivizes speed.</p>
+       </div>
+       <div class="modal-footer">
+         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+       </div>
+     </div>
+
     <div id="container" class="valign-wrapper">
       <div id="cnv_holder" class="col s7"></div>
       <div id="info_container" class="col s5 teal-text text-ligthen-5">
         <div id="chart"></div>
         <div id="app">
-          <div v-for="derp in foo">
-            <mod :title="derp.title" :value="derp.val"></mod>
+          <div class="row">
+             <div class="col s7">
+                <div v-for="derp in foo">
+                  <mod :title="derp.title" :value="derp.val"></mod>
+                </div>
+            </div>
+            <div class="col s5">
+              <editable :title="population.title" :value=population.val></editable>
+            </div>
           </div>
-          <editable :title="population.title" :value=population.val></editable>
         </div>
       </div>
     </div>
+    <footer class="page-footer pink lighten-1">
+      <div class="footer-copyright">
+           <div class="container">
+           © 2020 Copyright <a href="https://github.com/randando" target="_blank">randando</a>
+           </div>
+       </div>
+    </footer>
     <script src="controls.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instance = M.Modal.init(elems)[0];
+    });
+    </script>
   </body>
 </html>

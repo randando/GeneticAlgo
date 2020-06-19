@@ -53,7 +53,7 @@ const resetSketch = (size) =>{
   count = 0;
   gennumber = 0;
 
-  //GA vars
+  //get GA vars
   generations = app.foo[0].val;
   mutation_rate = app.foo[1].val;
   crossover_rate = app.foo[2].val;
@@ -71,8 +71,7 @@ const resetSketch = (size) =>{
       range: [0, pop_size]
     }
   }
-
-  let trace = {    
+  let trace = {
     y:[0],
     mode: 'lines'
   }
